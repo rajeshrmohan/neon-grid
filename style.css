@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0c0014;
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, inset 0 0 10px #ff00ff;
+}
+
+canvas {
+    display: block;
+    background-color: #000;
+    /* This filter makes everything drawn on the canvas glow! */
+    filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.7)) 
+            drop-shadow(0 0 5px rgba(255, 0, 255, 0.7));
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+#ui-overlay h1 {
+    font-size: 4rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    letter-spacing: 4px;
+}
+
+#ui-overlay h2 {
+    font-size: 2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    margin-bottom: 30px;
+}
+
+#ui-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 2px solid #00ffff;
+    background-color: transparent;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px #00ffff, inset 0 0 5px #00ffff;
+}
+
+button:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, inset 0 0 5px #00ffff;
+}
+
+.hide {
+    display: none !important;
+}
+
+#hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    z-index: 5;
+    pointer-events: none; /* Allows clicks to pass through to the canvas */
+}
+
+.hud-item {
+    text-align: center;
+}
+
+.hud-item span {
+    font-size: 0.8rem;
+    color: #ff00ff;
+    letter-spacing: 2px;
+}
+.hud-item p {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+#livesEl {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.life-icon {
+    width: 20px;
+    height: 10px;
+    background-color: #00ffff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 0 5px #00ffff;
+}

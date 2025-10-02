@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Grid: Retaliation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- The main game screen -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Overlay for Start/Game Over -->
+        <div id="ui-overlay">
+            <div id="startScreen">
+                <h1>NEON GRID</h1>
+                <h2>RETALIATION</h2>
+                <button id="startButton">START GAME</button>
+            </div>
+            <div id="gameOverScreen" class="hide">
+                <h1>GAME OVER</h1>
+                <p>FINAL SCORE: <span id="finalScore">0</span></p>
+                <button id="restartButton">RESTART</button>
+            </div>
+        </div>
+
+        <!-- Heads-Up Display (HUD) for in-game info -->
+        <div id="hud">
+            <div class="hud-item">
+                <span>SCORE</span>
+                <p id="scoreEl">0</p>
+            </div>
+            <div class="hud-item">
+                <span>HIGH SCORE</span>
+                <p id="highScoreEl">0</p>
+            </div>
+            <div class="hud-item">
+                <span>LIVES</span>
+                <div id="livesEl"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
